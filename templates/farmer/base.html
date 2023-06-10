@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Agri TaskMaster</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+
+
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/static/css/owl.theme.css" type="text/css" media="all">
+    <!-- Carousel (for News section) -->
+    <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" property=""/>
+    <!-- Flexslider css (for Testimonials) -->
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all"/>
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="/static/css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+    <style>
+        .pagination {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .pagination-number {
+            padding: 0.5em 0.8em;
+            border-radius: 2px;
+            color: #fff;
+            background-color: #6D85C7;
+        }
+
+        .pagination-number:hover, .pagination-current {
+            background-color: #3354AA;
+        }
+
+        .pagination-action {
+            margin: 0 0.1em;
+            display: inline-block;
+            padding: 0.5em 0.5em;
+            color: #B9B9B9;
+            font-size: 1.3em;
+        }
+
+        .pagination-action:hover, .pagination-previous, .pagination-next {
+            color: #3354AA;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+<!-- header -->
+<header>
+
+     <div id="google_translate_element"></div>
+
+        <!-- function which will translate the web page using google translator -->
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en', includedLanguages : 'mr,hi,en'},
+                    'google_translate_element'
+                );
+            }
+
+        </script>
+        <!-- Script code for google translator API -->
+        <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light px-sm-5 px-3 py-0">
+<!--        <h1>-->
+<!--            <a class="navbar-brand py-2" href="uploadtask">Agro Task</a>-->
+<!--        </h1>-->
+        <a class="navbar-brand" href="#">
+                <img src="static\images\Logo3.png" height="100" alt="Logo" loading="lazy" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-xl-5 ml-lg-3 px-xl-5 px-lg-4 py-4 text-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="uploadtask">Upload Task
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item mx-lg-4 my-lg-0 my-3">
+                    <a class="nav-link" href="viewtask">View Task</a>
+                </li>
+                <li class="nav-item mx-lg-4 my-lg-0 my-3">
+                    <a class="nav-link" href="workrequest">Work Request</a>
+                </li>
+                <li class="nav-item mx-lg-4 my-lg-0 my-3">
+                    <a class="nav-link" href="workassigned">Work Assigned</a>
+                </li>
+                <li class="nav-item mx-lg-4 my-lg-0 my-3">
+                    <a class="nav-link" href="ratings">Ratings</a>
+                </li>
+                <li class="nav-item mx-lg-4 my-lg-0 my-3">
+                    <a class="nav-link" href="changepassfarmer">Change Password</a>
+                </li>
+            </ul>
+            <div class="header-contact-w3ls text-center mt-lg-0 mt-4">
+                <a href="login" class="py-sm-4 py-3 px-4">
+                    <i class="fas fa-lock mr-2"></i>Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- //navigation -->
+</header>
+<!-- //header -->
+{%block content%}
+{%endblock%}
+<!-- footer -->
+<footer>
+    <div class="padding-w3ls-footer pt-sm-5">
+        <div class="d-flex footer-ones">
+            <!-- logo -->
+            <div class="col-lg-3 col-sm-4 logo2 text-sm-left text-center mb-sm-0 mb-3 py-xl-4 py-3">
+                <h2>
+                    <a href="/">Agri TaskMaster</a>
+                </h2>
+            </div>
+            <!-- //logo -->
+        </div>
+        <!-- footer end -->
+        <div class="d-flex footer-end wthree-sub py-4">
+            <!-- footer social icons -->
+            <div class="col-lg-3 footer-social">
+                <ul class="list-unstyled text-center">
+                    <li class="text-white mr-3">Share</li>
+                    <li>
+                        <a href="#" class="rounded-circle active">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="mx-3">
+                        <a href="#" class="rounded-circle">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //footer social icons -->
+            <!-- copyright -->
+            <div class="col-lg-5 copy-right text-center">
+                <p> &copy; 2022 Agri TaskMaster. All Rights Reserved | Developed by
+                    <a href="#"> Computer Students</a>
+                </p>
+            </div>
+            <!-- //copyright -->
+        </div>
+        <!-- //footer end -->
+    </div>
+</footer>
+<!-- //footer -->
+
+
+<!-- Js files -->
+<!-- JavaScript -->
+<script src="/static/js/jquery-2.2.3.min.js"></script>
+<!-- Default-JavaScript-File -->
+
+<!-- carousel (for new section) -->
+<script src="/static/js/owl.carousel.js"></script>
+<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					480: {
+						items: 2,
+						nav: true,
+						loop: false
+					},
+					736: {
+						items: 4,
+						nav: true,
+						loop: false
+					},
+					991: {
+						items: 3,
+						nav: true,
+						loop: false,
+						margin: 0
+					}
+				}
+			})
+		})
+
+
+
+</script>
+<!-- //carousel (for new section) -->
+
+<!-- flexSlider (for testimonials) -->
+<script defer src="/static/js/jquery.flexslider.js"></script>
+<script>
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+
+
+
+</script>
+<!-- //flexSlider (for testimonials) -->
+
+<!-- smooth scrolling -->
+<script src="/static/js/SmoothScroll.min.js"></script>
+<!-- move-top -->
+<script src="/static/js/move-top.js"></script>
+<!-- easing -->
+<script src="/static/js/easing.js"></script>
+<!--  necessary snippets for few javascript files -->
+<script src="/static/js/Agro Crop.js"></script>
+
+<script src="/static/js/bootstrap.js"></script>
+<!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+<!-- //Js files -->
+
+</body>
+
+</html>

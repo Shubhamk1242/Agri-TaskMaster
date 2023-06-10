@@ -1,0 +1,87 @@
+{% extends "farmer/base.html" %}
+{% block content %}
+<!--<div class="contact py-5">-->
+<!--    <div class="container py-xl-5 py-lg-3">-->
+<!--        <h3 class="tittle mb-xl-5 mb-4 text-dark text-center">-->
+<!--            <span class="text-uppercase">Agro Task</span>Upload Task</h3>-->
+<!--        <div class="row contact_wthreerow agileits-w3layouts pt-4">-->
+<!--            <div class="col-md-12 w3l_contact_form">-->
+<!--                <h4 class="font-italic mb-4">Upload Task</h4>-->
+<!--                <form method="post" enctype="multipart/form-data">-->
+<!--                    {%csrf_token%}-->
+<!--                    <div class="form-group">-->
+<!--                        <textarea name="work" maxlength="2000" class="form-control"  required></textarea>-->
+
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <i class="text-info">Select work images(*.jpg) </i>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="file" name="workimage1" class="form-control" required="">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="file" name="workimage2" class="form-control" required="">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label class="text-info">{{message}}</label>-->
+<!--                    </div>-->
+<!--                    <input type="submit" value="Upload">-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+	<section class="h-100 bg-dark">
+		<div class="container py-5 h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col">
+					<div class="card card-registration my-4">
+
+
+
+                        <div class="container py-5 h-100">
+						    <img src="static/images/upload.png" height="100" class="rounded mx-auto d-block" alt="...">
+                        </div>
+                        <div class="row justify-content-center">
+							  <h1>Upload Task</h1>
+                        </div>
+                        <hr style="width:100%;text-align:left;margin-left:0">
+						<div class="container">
+
+                            <form method="post" enctype="multipart/form-data">
+                                {%csrf_token%}
+                                <div class="form-group">
+                                    <i class="text-info">Write keywords(Weeding, cultivation)</i>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="work" maxlength="1000" id="form3Example8"  class="form-control" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <i class="text-info">Select work images(*.jpg) </i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="workimage1" class="form-control" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="workimage2" class="form-control" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-info">{{message}}</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row justify-content-center" >
+                                        <input type="submit" value="Upload" class="btn btn-success">
+                                    </div>
+							</div>
+                            </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

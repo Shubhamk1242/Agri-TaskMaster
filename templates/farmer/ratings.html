@@ -1,0 +1,175 @@
+{% extends "farmer/base.html" %}
+{% block content %}
+<!--<div class="contact py-5">-->
+<!--    <div class="container py-xl-5 py-lg-3">-->
+<!--        <h3 class="tittle mb-xl-5 mb-4 text-dark text-center">-->
+<!--            <span class="text-uppercase">Agro rating</span>Ratings</h3>-->
+<!--        <div class="row contact_wthreerow agileits-w3layouts pt-4">-->
+<!--            <div class="col-md-12 w3l_contact_form">-->
+<!--                <h4 class="font-italic mb-4">Give Ratings</h4>-->
+<!--                {% for rating in ratings %}-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-2">-->
+<!--                        <b>{{ rating.lname }}</b>-->
+<!--                        <i>{{ rating.lmobile }}</i>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-2">-->
+<!--                        Ratings-->
+<!--                        <b>{{ rating.ratings}}</b>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-3">-->
+<!--                        <form method="post">-->
+<!--                            {%csrf_token%}-->
+<!--                            <input type="hidden" name="lmobile" value="{{rating.lmobile}}">-->
+<!--                            <input type="hidden" name="fmobile" value="{{rating.fmobile}}">-->
+<!--                            <select name="rating" class="btn btn-primary">-->
+<!--                                <option value="1">1</option>-->
+<!--                                <option value="2">2</option>-->
+<!--                                <option value="3">3</option>-->
+<!--                                <option value="4">4</option>-->
+<!--                                <option value="5">5</option>-->
+<!--                            </select>-->
+<!--                            <button class="btn btn-success" type="submit">Update</button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <hr>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <div class="pagination">-->
+<!--                    {% if ratings.has_previous %}-->
+<!--                    <a class="pagination-action" href="?page=1">-->
+<!--                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>-->
+<!--                    </a>-->
+<!--                    <a class="pagination-action"-->
+<!--                       href="?page={{ ratings.previous_page_number }}">-->
+<!--                        <i class="fa fa-angle-left" aria-hidden="true"></i>-->
+<!--                    </a>-->
+<!--                    {% endif %}-->
+
+<!--                    {% for num in ratings.paginator.page_range %}-->
+
+<!--                    {% if ratings.number == num %}-->
+<!--                    <span class="pagination-number pagination-current">{{ num }}</span>-->
+<!--                    {% elif num > ratings.number|add:'-3' and num < ratings.number|add:'3' %}-->
+<!--                    <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>-->
+<!--                    {% endif %}-->
+
+<!--                    {% endfor %}-->
+
+<!--                    {% if ratings.has_next %}-->
+<!--                    <a class="pagination-action"-->
+<!--                       href="?page={{ ratings.next_page_number }}">-->
+<!--                        <i class="fa fa-angle-right" aria-hidden="true"></i>-->
+<!--                    </a>-->
+<!--                    <a class="pagination-action"-->
+<!--                       href="?page={{ ratings.paginator.num_pages }}">-->
+<!--                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>-->
+<!--                    </a>-->
+<!--                    {% endif %}-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+
+	<section class="h-100 bg-dark">
+		<div class="container py-5 h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col">
+					<div class="card card-registration my-4">
+<!--                         <div class="container py-5 h-100" >-->
+						    <img src="static/images/ratings.png" height="100" class="rounded mx-auto d-block" alt="...">
+<!--                         </div>-->
+                        <div class="row justify-content-center">
+                                    <h1>Give Ratings</h1>
+                        </div>
+                        <hr style="width:100%;text-align:left;margin-left:0">
+                        <div class="container" >
+<!--                            <div class="container py-5 h-100" >-->
+
+<!--                            </div>-->
+                        <div class="container py-5 h-100" >
+                            <div class="col-md-12 w3l_contact_form">
+<!--                            <h4 class="font-italic mb-4">Give Ratings</h4>-->
+                            {% for rating in ratings %}
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <b>{{ rating.lname }}</b>
+                                    <i>{{ rating.lmobile }}</i>
+                                </div>
+                                <div class="col-md-2">
+                                    Ratings
+                                    <b>{{ rating.ratings}}</b>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <form method="post">
+                                        {%csrf_token%}
+                                        <input type="hidden" name="lmobile" value="{{rating.lmobile}}">
+                                        <input type="hidden" name="fmobile" value="{{rating.fmobile}}">
+                                        <select name="rating" class="btn btn-primary">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <button class="btn btn-success" type="submit">Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                            <hr>
+                            {% endfor %}
+
+
+                            <div class="pagination">
+                                {% if ratings.has_previous %}
+                                <a class="pagination-action" href="?page=1">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                                </a>
+                                <a class="pagination-action"
+                                   href="?page={{ ratings.previous_page_number }}">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                </a>
+                                {% endif %}
+
+                                {% for num in ratings.paginator.page_range %}
+
+                                {% if ratings.number == num %}
+                                <span class="pagination-number pagination-current">{{ num }}</span>
+                                {% elif num > ratings.number|add:'-3' and num < ratings.number|add:'3' %}
+                                <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+                                {% endif %}
+
+                                {% endfor %}
+
+                                {% if ratings.has_next %}
+                                <a class="pagination-action"
+                                   href="?page={{ ratings.next_page_number }}">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                                <a class="pagination-action"
+                                   href="?page={{ ratings.paginator.num_pages }}">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+		            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+
+
+{% endblock %}
